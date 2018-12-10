@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Employee } from '../../model/employee.model';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeListComponent implements OnInit {
 
-  constructor() { }
+	employees: Employee[]; 
 
-  ngOnInit() {
-  }
+	constructor(private router: Router, private employeeService: EmployeeService) { }
+
+	ngOnInit() {
+		this.employeeService.findAll().subscribe( data => { this.employees = data; });
+	}
 
 }

@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeModule } from './employee/employee.module';
+import { AlertModule } from './alert/alert.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,10 @@ import { EmployeeModule } from './employee/employee.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    EmployeeModule
+    EmployeeModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
