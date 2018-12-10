@@ -1,1 +1,1 @@
-INSERT INTO employee(emp_id, emp_lastname, emp_firstname) VALUES ('1', 'thorng', 'stéphane');
+INSERT INTO employee(emp_id, emp_lastname, emp_firstname, emp_email) VALUES ('1', 'thorng', 'stéphane', 'stephane.thorng@gmail.fr');

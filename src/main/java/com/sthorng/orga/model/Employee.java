@@ -25,4 +25,7 @@ public class Employee {
 	
 	@Column(name="emp_firstname")
 	private String firstname;
+	
+	@Column(name="emp_email")
+	private String email;
 }
